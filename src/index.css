@@ -51,21 +51,20 @@ body, html {
 
 /* Navbar styling */
 #navbar {
-    position: fixed; /* Fix navbar to viewport */
-    top: 0; /* Top of the viewport */
-    width: 100%; /* Full viewport width */
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-    padding: 10px 20px; /* Padding */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
     height: 20px;
-    display: flex; /* Flexbox layout */
-    justify-content: space-between; /* Space out items */
-    align-items: center; /* Center items vertically */
-    transform: translateY(-100%); /* Start off-screen (above) */
-    opacity: 0; /* Invisible initially */
-    visibility: hidden; /* Hidden initially */
-    transition: opacity 0.4s ease-in-out, transform 0.7s ease-in-out, visibility 0s 0.7s; /* Smooth transitions */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, transform 0.7s ease-in-out, visibility 0s 0.7s;
 }
-
 
 #navbar.navbar-stationary {
     transition: none;
@@ -124,38 +123,107 @@ body, html {
     font-size: 1.1rem;
 }
 
-/* Search panel styling */
+/* Search panel should stay fixed below the navbar */
 #search-panel {
-    position: fixed; /* Fix navbar to viewport */
-    top: 40px; /* Top of the viewport */
-    width: 100%; /* Full viewport width */
-    background-color: blue; /* Semi-transparent background */
-    padding: 10px 20px; /* Padding */
-    height: 20px;
-    display: flex; /* Flexbox layout */
-    justify-content: space-between; /* Space out items */
-    align-items: center; /* Center items vertically */
-    transform: translateY(-100%); /* Start off-screen (above) */
-    opacity: 0; /* Invisible initially */
-    visibility: hidden; /* Hidden initially */
-    transition: opacity 0.4s ease-in-out, transform 0.7s ease-in-out, visibility 0s 0.7s; /* Smooth transitions */
-}
-
-#search-panel.panel-stationary {
-    transition: none;
-    transform: translateY(0);
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    height: 50px;
+    background-color: #ddddff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between the news and search bar */
+    z-index: 1; /* Ensure it's above other elements */
+    transform: translateY(0); /* Make it visible */
     opacity: 1;
     visibility: visible;
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
 
-/* Search bar styling */
-#search-bar {
-    width: 300px;
-    padding: 2px 12px;
-    border: none;
-    border-radius: 4px;
+/* Left-side scrolling news */
+#news-ticker {
+    flex: 1;
+    color: #042558;
     font-size: 1rem;
-    color: #000;
+    font-family: "Open Sans", sans-serif;
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflow */
+    box-sizing: border-box;
+}
+
+/* Scrolling animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Apply the animation */
+#news-ticker span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 15s linear infinite; /* Adjust speed by changing the duration */
+}
+
+/* Right-side search bar */
+#search-form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Keep it aligned to the right */
+    flex: 1;
+}
+
+/* Enhanced search bar styling */
+#search-bar {
+    width: 250px;
+    height: 25px;
+    padding: 10px;
+    border: 1px solid darkgray;
+    background-color: lightblue;
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    transition: width 0.4s ease-in-out;
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+}
+
+/* On focus, expand the search bar */
+#search-bar:focus {
+    width: 300px;
+}
+
+/* Search button styling */
+#search-btn {
+    background-color: #042558;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #0349a0;
+}
+
+/* Clear button styling */
+#clear-btn {
+    background-color: transparent;
+    border: none;
+    color: #ccc;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#clear-btn:hover {
+    color: #191515;
 }
 
 /* Main content styling */

@@ -14,6 +14,9 @@ function transitionToSection(sectionIndex) {
         document.getElementById('navbar').classList.add('navbar-stationary'); // Make navbar stationary
         document.getElementById('intro-title').style.transform = 'scale(0.5) translateY(-50px)'; // Shrink and move title
         document.getElementById('intro-title').style.opacity = '0'; // Fade-out intro title
+        
+        // Show the search panel with smoother transitions
+        document.getElementById('search-panel').classList.add('panel-stationary');
     } else if (sectionIndex === 0) {
         // Transition from signup/login back to intro section
         document.getElementById('intro-section').style.animation = 'none'; // Reset animation
@@ -26,6 +29,9 @@ function transitionToSection(sectionIndex) {
         document.getElementById('navbar').style.visibility = 'hidden'; // Hide navbar
         document.getElementById('intro-title').style.transform = 'scale(1)'; // Reset title scale
         document.getElementById('intro-title').style.opacity = '1'; // Show intro title
+        
+        // Hide the search panel smoothly
+        document.getElementById('search-panel').classList.remove('panel-stationary');
     }
     currentSection = sectionIndex; // Update current section
 }
@@ -47,3 +53,8 @@ document.addEventListener('wheel', (e) => {
         transitionToSection(0); // Move back to intro section
     }
 });
+
+// Function to clear the search input
+function clearInput() {
+    document.getElementById('search-bar').value = '';
+}

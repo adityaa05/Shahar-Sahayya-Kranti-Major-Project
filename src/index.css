@@ -191,10 +191,9 @@ body, html {
     border: 1px solid darkgray;
     background-color: lightblue;
     font-size: 0.8rem;
-    font-weight: 700;
     outline: none;
     transition: width 0.4s ease-in-out;
-    font-family: "IBM Plex Sans Condensed", sans-serif;
+    font-family: "Maven Pro", sans-serif;
 }
 
 /* On focus, expand the search bar */

@@ -1,0 +1,161 @@
+    /* General Styles */
+    body, html {
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        height: 100%; /* Full height for body and html */
+        overflow: hidden; /* Hide overflow to prevent scrollbars */
+        background-color: #000; /* Black background */
+    }
+
+    /* Intro and Signup/Login sections */
+    #intro-section, #signup-login-section {
+        height: 100vh; /* Full viewport height */
+        width: 100%; /* Full viewport width */
+        display: flex; /* Flexbox layout */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        position: fixed; /* Fix sections to the viewport */
+        top: 0; /* Top of the viewport */
+        left: 0; /* Left of the viewport */
+        background-color: #042558; /* Background color */
+        background-size: cover; /* Cover the whole area with background image */
+        background-position: center; /* Center background image */
+        transition: transform 0.7s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transitions for transform and opacity */
+        transform-origin: top; /* Transform from the top */
+        transform: scale(1.01); /* Slightly scale up */
+    }
+
+    #signup-login-section {
+        transform: translateY(100%) scale(1.01); /* Start off-screen (below) */
+    }
+
+    /* Intro title styling */
+    #intro-title {
+        font-family: "Tiro Devanagari Sanskrit", serif; /* Font family */
+        font-size: 8rem; /* Large font size */
+        color: yellow; /* Yellow text color */
+        transition: transform 0.7s ease-in-out, font-size 0.7s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transitions */
+    }
+
+    /* Subtitle styling */
+    #subtitle {
+        position: absolute; /* Absolute positioning within intro section */
+        bottom: 20px; /* Positioned 20px from bottom */
+        width: 100%; /* Full width */
+        text-align: center; /* Centered text */
+        color: white; /* White text color */
+        font-size: 1rem; /* Font size */
+        opacity: 1; /* Fully visible */
+        transition: opacity 0.5s ease; /* Smooth opacity transition */
+    }
+
+    /* Navbar styling */
+    #navbar {
+        position: fixed; /* Fix navbar to viewport */
+        top: 0; /* Top of the viewport */
+        width: 100%; /* Full viewport width */
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+        padding: 10px 20px; /* Padding */
+        height: 20px;
+        display: flex; /* Flexbox layout */
+        justify-content: space-between; /* Space out items */
+        align-items: center; /* Center items vertically */
+        transform: translateY(-100%); /* Start off-screen (above) */
+        opacity: 0; /* Invisible initially */
+        visibility: hidden; /* Hidden initially */
+        transition: opacity 0.4s ease-in-out, transform 0.7s ease-in-out, visibility 0s 0.7s; /* Smooth transitions */
+    }
+
+    #navbar.navbar-stationary {
+        transition: none; /* Disable transitions */
+        transform: translateY(0); /* Move to visible position */
+        opacity: 1; /* Fully visible */
+        visibility: visible; /* Ensure it's visible */
+    }
+
+    #navbar-logo{
+        height: 55px; /* Set the height of the logo to match the navbar */
+        margin-left: 20px; /* Space between logo and title */
+    }
+
+    /* Navbar title styling */
+    #navbar-title {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.2rem; /* Font size */
+        color: white; /* Yellow text color */
+        margin-left: -660px;
+        font-weight:300;
+    }
+
+    /* Navbar list styling */
+    #navbar ul {
+        list-style: none; /* Remove default list styling */
+        display: flex; /* Flexbox layout */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+
+    /* Navbar list item styling */
+    #navbar ul li {
+        position: relative; /* Position relative for pseudo-element */
+        padding: 0 15px; /* Space around each item */
+        display: flex; /* Flexbox layout for vertical alignment */
+        align-items: center; /* Center items vertically */
+        margin-right: 20px;
+    }
+
+    /* Vertical divider styling */
+    #navbar ul li:not(:last-child)::after {
+        content: ''; /* Empty content for divider */
+        position: absolute; /* Absolute positioning */
+        top: 10%; /* Position from the top */
+        right: -10px; /* Align to the right edge */
+        width: 1.5px; /* Divider width */
+        height: 80%; /* Divider height */
+        background-color: white; /* Divider color */
+    }
+
+    /* Navbar link styling */
+    #navbar ul li a {
+        font-family: "Work Sans", sans-serif;
+        color: white; /* White text color */
+        text-decoration: none; /* Remove underline */
+        font-size: 1.1rem; /* Font size */
+    }
+
+    /* Main content styling */
+    #main-content {
+        margin-top: 60px; /* Space for navbar */
+        color: white; /* White text color */
+        text-align: center; /* Centered text */
+    }
+
+    /* Animation for slide-up effect */
+    @keyframes slideUp {
+        from {
+            transform: translateY(0); /* Start from current position */
+        }
+        to {
+            transform: translateY(-100%); /* Move up to off-screen */
+        }
+    }
+
+    /* Animation for fade-in effect */
+    @keyframes fadeIn {
+        from {
+            opacity: 0; /* Start from invisible */
+        }
+        to {
+            opacity: 1; /* End at fully visible */
+        }
+    }
+
+    /* Example media query for smaller screens */
+    @media (max-width: 768px) {
+        #intro-title {
+            font-size: 4rem; /* Adjust title size for smaller screens */
+        }
+        #navbar-title {
+            font-size: 1.5rem; /* Adjust navbar title size */
+        }
+    }

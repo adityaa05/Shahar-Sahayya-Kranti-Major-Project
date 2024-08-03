@@ -1,0 +1,176 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* Intro and Signup/Login sections */
+#intro-section, #signup-login-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #042558;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.7s ease-in-out, opacity 0.5s ease-in-out;
+    transform-origin: top;
+    transform: scale(1.01);
+}
+
+#signup-login-section {
+    transform: translateY(100%) scale(1.01);
+}
+
+/* Intro title styling */
+#intro-title {
+    font-family: "Tiro Devanagari Sanskrit", serif;
+    font-size: 8rem;
+    color: yellow;
+    transition: transform 0.7s ease-in-out, font-size 0.7s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Subtitle styling */
+#subtitle {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Navbar styling */
+#navbar {
+    position: fixed; /* Fix navbar to viewport */
+    top: 0; /* Top of the viewport */
+    width: 100%; /* Full viewport width */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 10px 20px; /* Padding */
+    height: 20px;
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+    transform: translateY(-100%); /* Start off-screen (above) */
+    opacity: 0; /* Invisible initially */
+    visibility: hidden; /* Hidden initially */
+    transition: opacity 0.4s ease-in-out, transform 0.7s ease-in-out, visibility 0s 0.7s; /* Smooth transitions */
+}
+
+
+#navbar.navbar-stationary {
+    transition: none;
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+#navbar-logo {
+    height: 55px;
+    margin-left: 20px;
+}
+
+/* Navbar title styling */
+#navbar-title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    margin-left: -660px;
+    font-weight: 300;
+}
+
+/* Navbar list styling */
+#navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar list item styling */
+#navbar ul li {
+    position: relative;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+/* Vertical divider styling */
+#navbar ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: -10px;
+    width: 1.5px;
+    height: 80%;
+    background-color: white;
+}
+
+/* Navbar link styling */
+#navbar ul li a {
+    font-family: "Work Sans", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* Search panel styling */
+#search-panel {
+    position: fixed; /* Fix navbar to viewport */
+    top: 40px; /* Top of the viewport */
+    width: 100%; /* Full viewport width */
+    background-color: blue; /* Semi-transparent background */
+    padding: 10px 20px; /* Padding */
+    height: 20px;
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+    transform: translateY(-100%); /* Start off-screen (above) */
+    opacity: 0; /* Invisible initially */
+    visibility: hidden; /* Hidden initially */
+    transition: opacity 0.4s ease-in-out, transform 0.7s ease-in-out, visibility 0s 0.7s; /* Smooth transitions */
+}
+
+#search-panel.panel-stationary {
+    transition: none;
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Search bar styling */
+#search-bar {
+    width: 300px;
+    padding: 2px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #000;
+}
+
+/* Main content styling */
+#main-content {
+    margin-top: 120px; /* Space for navbar and search panel */
+    color: white;
+    text-align: center;
+}
+
+/* Example media query for smaller screens */
+@media (max-width: 768px) {
+    #intro-title {
+        font-size: 4rem;
+    }
+    #navbar-title {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartShit</title>
+    <!-- Preconnect to improve performance by establishing early connections -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to Google Fonts for typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cedarville+Cursive&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Devanagari:wght@100..900&family=PT+Sans+Narrow:wght@400;700&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cedarville+Cursive&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Devanagari:wght@100..900&family=PT+Sans+Narrow:wght@400;700&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cedarville+Cursive&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Devanagari:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Narrow:wght@400;700&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Link to your custom stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Intro section with title and subtitle -->
+    <div id="intro-section">
+        <h1 id="intro-title">शहर सहाय्य-क्रांती, ठाणे</h1>
+        <p id="subtitle">सुरू ठेवण्यासाठी डाउन की दाबा किंवा स्क्रोल करा</p>
+    </div>
+
+    <!-- Signup/Login section with navigation bar and main content -->
+    <div id="signup-login-section">
+        <nav id="navbar">
+            <!-- Logo Image -->
+            <img id="navbar-logo" src="circle-flag.png" alt="india-logo">
+            <!-- Navbar Title -->
+            <h1 id="navbar-title">Shahar Sahayya Kranti, Thane</h1>
+            <!-- Navigation links -->
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#setting">Settings</a></li>
+                <li><a href="SignUp.html">Register</a></li>
+                <li><a href="LogIn.html">Log In</a></li>
+            </ul>
+        </nav>
+        <div id="main-content">
+            <p>Main content goes here...</p>
+        </div>
+    </div>
+
+    <!-- Link to your custom JavaScript file -->
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+body {
+    font-family: "Geologica", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    
+
+    margin: 0; /* Remove auto margin to center properly */
+    width: 100%;
+}
+
+#title-text {
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 2px solid #fff5d7;
+    background-color: #fff5d7;
+
+
+}
+
+.section-01, .section-02 {
+    margin-bottom: 20px;
+    
+}
+
+.labels {
+    
+    display:block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.inputs {
+    padding: 15px 600px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: none;
+    outline-color: transparent;
+    background-color: #BFDBFE;
+    text-align: left;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    vertical-align: middle;   
+}
+
+h2 {
+    
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 1.2em;
+    background-color: #e8f9fd;
+}
+
+select.inputs {
+    width: 300px;
+    padding: 8px;
+}
+
+
+

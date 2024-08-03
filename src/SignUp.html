@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div id="title-text">
+            <h1>SIGN UP</h1>
+        </div>
+
+        <div class="section-01">
+            <h2>Account Information:</h2>
+            <form class="input">
+                <label class="labels" for="username">Username:</label>
+                <input class="inputs" type="text" name="username" id="username">
+
+                <label class="labels" for="email">Email Address:</label>
+                <input class="inputs" type="email" name="email" id="email">
+
+                <label class="labels" for="pwd">Password:</label>
+                <input class="inputs" type="password" name="psw" id="pwd">
+            </form>
+        </div>
+
+        <div class="section-02">
+            <h2>Personal Information:</h2>
+            <form class="input">
+                <label class="labels" for="first-name">First Name:</label>
+                <input class="inputs" type="text" name="firstname" id="first-name">
+
+                <label class="labels" for="last-name">Last Name:</label>
+                <input class="inputs" type="text" name="lastname" id="last-name">
+
+                <label class="labels" for="city">City:</label>
+                <input class="inputs" type="text" name="city" id="city">
+
+                <label class="labels" for="state">State:</label>
+                <select class="inputs" name="states" id="states">
+                    <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="AR">Arunachal Pradesh</option>
+                    <option value="AS">Assam</option>
+                    <option value="BR">Bihar</option>
+                    <option value="CT">Chhattisgarh</option>
+                    <option value="GA">Gujarat</option>
+                    <option value="HR">Haryana</option>
+                    <option value="HP">Himachal Pradesh</option>
+                    <option value="JK">Jammu and Kashmir</option>
+                    <option value="GA">Goa</option>
+                    <option value="JH">Jharkhand</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="KL">Kerala</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="MH">Maharashtra</option>
+                    <option value="MN">Manipur</option>
+                    <option value="ML">Meghalaya</option>
+                    <option value="MZ">Mizoram</option>
+                    <option value="NL">Nagaland</option>
+                    <option value="OR">Odisha</option>
+                    <option value="PB">Punjab</option>
+                    <option value="RJ">Rajasthan</option>
+                    <option value="SK">Sikkim</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="TG">Telangana</option>
+                    <option value="TR">Tripura</option>
+                    <option value="UT">Uttarakhand</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="WB">West Bengal</option>
+                    <option value="AN">Andaman and Nicobar Islands</option>
+                    <option value="CH">Chandigarh</option>
+                    <option value="DN">Dadra and Nagar Haveli</option>
+                    <option value="DD">Daman and Diu</option>
+                    <option value="DL">Delhi</option>
+                    <option value="LD">Lakshadweep</option>
+                    <option value="PY">Puducherry</option>
+                </select>
+
+                <label class="labels" for="pincode">Pincode:</label>
+                <input class="inputs" type="number" name="pincode" id="pincode">
+
+                <label class="labels" for="education">Education:</label>
+                <select class="inputs" name="education" id="education">
+                    <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                    <option value="No formal education">No formal education</option>
+                    <option value="Primary education">Primary education</option>
+                    <option value="Secondary education">Secondary education or high school</option>
+                    <option value="GED">GED</option>
+                    <option value="Vocational qualification">Vocational qualification</option>
+                    <option value="Bachelor's degree">Bachelor's degree</option>
+                    <option value="Master's degree">Master's degree</option>
+                    <option value="Doctorate or higher">Doctorate or higher</option>
+                </select>
+
+                <label class="labels" for="aadharno">Aadhar No:</label>
+                <input class="inputs" type="number" name="aadharno" id="aadharno">
+
+                <label class="labels" for="panno">PAN No:</label>
+                <input class="inputs" type="number" name="panno" id="panno">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

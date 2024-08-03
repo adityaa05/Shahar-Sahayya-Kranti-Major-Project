@@ -58,3 +58,27 @@ document.addEventListener('wheel', (e) => {
 function clearInput() {
     document.getElementById('search-bar').value = '';
 }
+
+// Example of adding tweets dynamically
+function addTweet(containerId, author, content) {
+    const container = document.getElementById(containerId);
+    const tweet = document.createElement('div');
+    tweet.className = 'tweet';
+    
+    const authorElem = document.createElement('p');
+    authorElem.className = 'tweet-author';
+    authorElem.innerText = author;
+    
+    const contentElem = document.createElement('p');
+    contentElem.className = 'tweet-content';
+    contentElem.innerText = content;
+    
+    tweet.appendChild(authorElem);
+    tweet.appendChild(contentElem);
+    
+    container.appendChild(tweet);
+}
+
+// Example usage
+addTweet('top-tweets', 'User1', 'This is a top tweet!');
+addTweet('recent-tweets', 'User2', 'This is a recent tweet!');

@@ -123,7 +123,7 @@ body, html {
     font-size: 1.1rem;
 }
 
-/* Search panel should stay fixed below the navbar */
+/* Search panel styling */
 #search-panel {
     position: fixed;
     top: 40px;
@@ -135,10 +135,16 @@ body, html {
     align-items: center;
     justify-content: space-between; /* Space between the news and search bar */
     z-index: 1; /* Ensure it's above other elements */
+    transform: translateY(100%); /* Initially hidden */
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+#search-panel.panel-stationary {
     transform: translateY(0); /* Make it visible */
     opacity: 1;
     visibility: visible;
-    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
 
 /* Left-side scrolling news */
@@ -151,10 +157,15 @@ body, html {
     overflow: hidden; /* Hide overflow */
     box-sizing: border-box;
     width: 100%;
-    
+    position: relative; /* Ensure proper positioning */
 }
 
-/* Scrolling animation */
+#news-ticker span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 18s linear infinite; /* Adjust speed by changing the duration */
+}
+
 @keyframes scroll-left {
     0% {
         transform: translateX(100%);
@@ -162,13 +173,6 @@ body, html {
     100% {
         transform: translateX(-100%);
     }
-}
-
-/* Apply the animation */
-#news-ticker span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll-left 15s linear infinite; /* Adjust speed by changing the duration */
 }
 
 /* Right-side search bar */
@@ -218,29 +222,15 @@ body, html {
 #clear-btn {
     background-color: transparent;
     border: none;
-    color: #ccc;
-    margin-left: 10px;
+    color: #042558;
+    margin-left: 5px;
     cursor: pointer;
-    transition: color 0.3s ease;
 }
 
-#clear-btn:hover {
-    color: #191515;
-}
-
-/* Main content styling */
-#main-content {
-    margin-top: 120px; /* Space for navbar and search panel */
-    color: white;
-    text-align: center;
-}
-
-/* Example media query for smaller screens */
-@media (max-width: 768px) {
-    #intro-title {
-        font-size: 4rem;
-    }
-    #navbar-title {
-        font-size: 1.5rem;
-    }
+/* FontAwesome icons */
+.fa {
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.2em;
 }

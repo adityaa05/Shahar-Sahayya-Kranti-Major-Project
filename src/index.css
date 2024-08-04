@@ -242,9 +242,9 @@ body, html {
     background-color: #f5f8fa; /* Twitter-like background color */
     color: #000; /* Adjust text color */
     position: relative;
-    top: -54px;
+    top: -136px;
     width: 100%;
-    height: calc(70vh - 55px);
+    height: calc(50vh - 55px);
     border: none; /* Removed red border */
 }
 
@@ -271,6 +271,7 @@ body, html {
 
 /* Tweet Styling */
 .tweet {
+    border: 1px solid red;
     display: flex;
     align-items: flex-start;
     margin-bottom: 15px;
@@ -283,9 +284,9 @@ body, html {
 
 /* Profile Picture Styling */
 .tweet-profile-pic {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+   /* border-radius: 50%;*/
     margin-right: 10px;
     border: 2px solid #e1e8ed; /* Light border around profile pic */
 }
@@ -298,14 +299,13 @@ body, html {
 /* Tweet Author Styling */
 .tweet-author {
     font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 5px;
+    font-weight: 500;
+    color: #1da1f2;
+    margin-top: -1px;
 }
 
 /* Tweet Timestamp Styling */
 .tweet-timestamp {
-    font-weight: normal;
     color: #657786;
     font-size: 0.9rem;
 }
@@ -316,4 +316,5 @@ body, html {
     color: #000;
     font-family: "Open Sans", sans-serif;
     line-height: 1.4;
+    margin-top: -16px;
 }

@@ -59,6 +59,37 @@ function clearInput() {
     document.getElementById('search-bar').value = '';
 }
 
+// Function to initialize the news alert system
+function initNewsAlert() {
+    const alertBox = document.getElementById('news-alert');
+    const alertText = document.getElementById('alert-text');
+    
+    // Function to move the alert text
+    function moveAlert() {
+        const alertWidth = alertBox.offsetWidth;
+        const textWidth = alertText.offsetWidth;
+        
+        let position = alertWidth;
+        
+        function animate() {
+            if (position < -textWidth) {
+                position = alertWidth;
+            } else {
+                position -= 2; // Adjust this value to change the speed
+            }
+            alertText.style.transform = `translateX(${position}px)`;
+            requestAnimationFrame(animate);
+        }
+        
+        animate();
+    }
+    
+    moveAlert();
+}
+
+// Initialize the news alert system on page load
+window.onload = initNewsAlert;
+
 // Example of adding tweets dynamically
 function addTweet(containerId, author, content) {
     const container = document.getElementById(containerId);
@@ -80,5 +111,5 @@ function addTweet(containerId, author, content) {
 }
 
 // Example usage
-addTweet('top-tweets', 'User1', 'This is a top tweet!');
-addTweet('recent-tweets', 'User2', 'This is a recent tweet!');
+//addTweet('top-tweets', 'User1', 'This is a top tweet!');
+//addTweet('recent-tweets', 'User2', 'This is a recent tweet!'); 
